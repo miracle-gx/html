@@ -1,0 +1,7 @@
+CREATE TABLE `stock_log` (
+  `stock_log_id` varchar(64) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `item_id` int(11) NOT NULL DEFAULT '0',
+  `amount` int(11) NOT NULL DEFAULT '0',
+  `status` int(11) NOT NULL DEFAULT '0' COMMENT '1表示初始状态，2表示下单扣减库存成功，3表示下单回滚',
+  PRIMARY KEY (`stock_log_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
